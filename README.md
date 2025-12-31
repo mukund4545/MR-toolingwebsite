@@ -43,18 +43,7 @@ A complete website for MR Tooling Industries with frontend, backend, and admin p
 cd backend
 ```
 
-2. Create `.env` file:
-```env
-MONGO_URL=mongodb://localhost:27017
-DB_NAME=emergent_mr
-RESEND_API_KEY=re_3r6xtssc_9nn5KE3qnR9AZrGQqinZg4Wn
-SENDER_EMAIL=onboarding@resend.dev
-RECIPIENT_EMAIL=mukundprajapati2408@gmail.com
-JWT_SECRET_KEY=your-secret-key-change-in-production
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=admin123
-CORS_ORIGINS=http://localhost:3000
-```
+
 
 3. Install dependencies:
 ```bash
@@ -168,6 +157,7 @@ See `DEPLOYMENT.md` for detailed deployment instructions.
 ## License
 
 Proprietary - All rights reserved
+
 
 
 
