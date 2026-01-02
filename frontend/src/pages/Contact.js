@@ -215,7 +215,7 @@ const Contact = () => {
                   height="100%"
                   frameBorder="0"
                   style={{ border: 0 }}
-                  src={`https://api.maptiler.com/maps/streets-v2/?key=E8JK5CXZGq1uAr2Y2IRO&markers=18.713959532626337,73.79653561349247,pin,ff0000,24&dragging=false&zoomControl=true&scrollWheelZoom=true#18.713959532626337,73.79653561349247,16z`}
+                  src={`https://api.maptiler.com/maps/streets-v2/?key=E8JK5CXZGq1uAr2Y2IRO&markers=18.713990017499217,73.7966750883585,pin,ff0000,24&dragging=false&zoomControl=true&scrollWheelZoom=true#18.713990017499217,73.7966750883585,16z`}
                   allowFullScreen
                 />
               </div>
