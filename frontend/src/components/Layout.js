@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import logo from '../assets/logo.jpeg';
 
 const Layout = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
 
@@ -85,12 +86,92 @@ const Layout = () => {
             </nav>
 
             {/* Mobile menu button */}
-            <button className="md:hidden text-gray-700">
+            <button
+              className="md:hidden text-gray-700"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+            >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
+          {isMobileMenuOpen && (
+            <nav className="md:hidden pb-4">
+              <div className="flex flex-col space-y-1">
+                <Link
+                  to="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/about"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/about') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/services"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/services') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Services
+                </Link>
+                <Link
+                  to="/infrastructure"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/infrastructure') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Infrastructure
+                </Link>
+                <Link
+                  to="/gallery"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/gallery') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Gallery
+                </Link>
+                <Link
+                  to="/industries"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/industries') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Industries
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive('/contact') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600'
+                  }`}
+                >
+                  Contact
+                </Link>
+                <Link
+                  to="/quote"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                >
+                  Request Quote
+                </Link>
+              </div>
+            </nav>
+          )}
         </div>
       </header>
 

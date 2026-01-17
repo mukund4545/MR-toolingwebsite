@@ -52,17 +52,17 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative bg-cover bg-center bg-no-repeat text-white py-32"
+        className="relative bg-cover bg-center bg-no-repeat text-white py-20 sm:py-24 md:py-32"
         style={{ backgroundImage: `url(${coverpage})` }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               {companyInfo?.tagline || 'Excellence in Plastic Injection Molding & Automotive Components'}
             </h1>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-lg sm:text-xl mb-8 text-blue-100">
               With over 15 years of expertise, we deliver world-class plastic components for automotive and industrial sectors.
             </p>
             <div className="flex flex-wrap gap-4">
